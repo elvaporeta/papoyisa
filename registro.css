@@ -1,0 +1,100 @@
+/* Estilos extra solo para registro.php (usa también style.css) */
+
+.registro {
+  max-width: 560px;
+}
+
+/* Etiquetas del formulario */
+.registro label {
+  font-weight: 600;
+  color: var(--azul-osc);
+  margin-bottom: -6px;
+  position: relative;
+  z-index: 1;
+}
+body.noche .registro label { color: var(--amarillo); }
+
+.registro form { gap: 10px; }
+
+.registro .btn {
+  margin-top: 8px;
+}
+
+/* Medidor de fuerza de contraseña */
+.fuerza {
+  height: 10px;
+  background: #e6e6e6;
+  border: 2px solid var(--azul);
+  border-radius: 10px;
+  overflow: hidden;
+  position: relative;
+  z-index: 1;
+}
+.fuerza div {
+  height: 100%;
+  width: 0;
+  transition: width .3s, background .3s;
+}
+.fuerza-txt {
+  min-height: 1.2em;
+  font-weight: 600;
+  position: relative;
+  z-index: 1;
+}
+
+/* Errores */
+.registro .err div + div { margin-top: 4px; }
+
+/* ---------- Tarjeta de éxito ---------- */
+.exito {
+  text-align: center;
+  background: linear-gradient(160deg, var(--amarillo) 0%, #ffe95c 100%);
+  color: #2a2a2a;
+  border-color: var(--azul-osc);
+  box-shadow: 8px 8px 0 var(--azul-osc);
+}
+.exito::before { border-color: var(--azul); }
+
+.exito > * { position: relative; z-index: 1; }
+
+.exito-emoji {
+  font-size: 4.5rem;
+  display: inline-block;
+  animation: brinco-exito 1s ease-in-out infinite;
+}
+@keyframes brinco-exito {
+  0%, 100% { transform: scale(1) rotate(-8deg); }
+  50%      { transform: scale(1.2) rotate(8deg); }
+}
+
+.exito h2 {
+  font-size: 3rem !important;
+  color: var(--azul-osc) !important;
+  text-shadow: 3px 3px 0 #fff;
+  margin: 0 0 6px !important;
+}
+
+.exito-texto {
+  font-family: 'Bangers', cursive;
+  font-size: 1.8rem;
+  letter-spacing: 1.5px;
+  margin: 6px 0 12px;
+}
+
+.cuenta {
+  display: inline-block;
+  min-width: 1.6em;
+  background: var(--azul);
+  color: #fff;
+  font-weight: 700;
+  border-radius: 50%;
+  padding: 2px 6px;
+}
+
+.btn-link {
+  display: inline-block;
+  text-decoration: none;
+  margin-top: 10px;
+  color: #fff !important;
+}
+.btn-link:hover { color: var(--azul-osc) !important; }
